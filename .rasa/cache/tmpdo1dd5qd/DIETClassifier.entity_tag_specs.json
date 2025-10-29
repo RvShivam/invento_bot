@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-language",
+      "2": "I-language",
+      "3": "L-language",
+      "4": "U-language",
+      "5": "B-number",
+      "6": "I-number",
+      "7": "L-number",
+      "8": "U-number",
+      "9": "B-product_name",
+      "10": "I-product_name",
+      "11": "L-product_name",
+      "12": "U-product_name",
+      "13": "B-time_period",
+      "14": "I-time_period",
+      "15": "L-time_period",
+      "16": "U-time_period",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-language": 1,
+      "I-language": 2,
+      "L-language": 3,
+      "U-language": 4,
+      "B-number": 5,
+      "I-number": 6,
+      "L-number": 7,
+      "U-number": 8,
+      "B-product_name": 9,
+      "I-product_name": 10,
+      "L-product_name": 11,
+      "U-product_name": 12,
+      "B-time_period": 13,
+      "I-time_period": 14,
+      "L-time_period": 15,
+      "U-time_period": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

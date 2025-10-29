@@ -1,0 +1,67 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "add_stock": 0,
+        "affirm": 1,
+        "back": 2,
+        "check_item_details": 3,
+        "check_stock": 4,
+        "deny": 5,
+        "goodbye": 6,
+        "greet": 7,
+        "nlu_fallback": 8,
+        "out_of_scope": 9,
+        "query_low_stock": 10,
+        "query_sales_report": 11,
+        "remove_stock": 12,
+        "restart": 13,
+        "session_start": 14,
+        "set_language": 15
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_set_language": 13,
+        "action_check_stock": 14,
+        "action_add_stock": 15,
+        "action_remove_stock": 16,
+        "action_low_stock": 17,
+        "action_check_item_details": 18,
+        "action_sales_report": 19,
+        "utter_goodbye": 20,
+        "utter_greet": 21
+      },
+      "entities": {
+        "language": 0,
+        "number": 1,
+        "product_name": 2,
+        "time_period": 3
+      },
+      "slots": {
+        "language_0": 0,
+        "product_name_0": 1,
+        "quantity_0": 2,
+        "quantity_1": 3,
+        "time_period_0": 4
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

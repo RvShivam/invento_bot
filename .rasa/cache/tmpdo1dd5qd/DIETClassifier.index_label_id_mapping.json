@@ -1,0 +1,13 @@
+{
+  "0": "add_stock",
+  "1": "affirm",
+  "2": "check_item_details",
+  "3": "check_stock",
+  "4": "deny",
+  "5": "goodbye",
+  "6": "greet",
+  "7": "query_low_stock",
+  "8": "query_sales_report",
+  "9": "remove_stock",
+  "10": "set_language"
+}

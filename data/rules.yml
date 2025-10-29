@@ -1,0 +1,38 @@
+version: "3.1"
+
+rules:
+
+- rule: Greet the user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Handle language setting
+  steps:
+  - intent: set_language
+  - action: action_set_language
+
+- rule: Handle stock check
+  steps:
+  - intent: check_stock
+  - action: action_check_stock
+
+- rule: Handle item details check
+  steps:
+  - intent: check_item_details
+  - action: action_check_item_details
+
+- rule: Handle low stock query
+  steps:
+  - intent: query_low_stock
+  - action: action_low_stock
+
+- rule: Handle sales report query
+  steps:
+  - intent: query_sales_report
+  - action: action_sales_report

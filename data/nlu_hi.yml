@@ -1,0 +1,196 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - नमस्ते
+    - हाय
+    - हेलो
+    - कैसा चल रहा है
+    - और बताओ
+    - नमस्ते जी
+    - क्या हाल है
+    - Hey
+    - Hello ji
+    - Aur bhai kya haal hai
+    - प्रणाम
+    - aur sunao
+    - kya haal chaal
+    - sab theek?
+    - wassup
+    - yo bro
+    - hey buddy
+    - start karein?
+    - chalo shuru karte hain
+    - good morning ji
+    - good evening sir
+    - kaise ho?
+
+- intent: goodbye
+  examples: |
+    - अलविदा
+    - बाय
+    - फिर मिलेंगे
+    - बाद में बात करते हैं
+    - चलता हूँ
+    - अच्छा, ठीक है
+    - Bye bye
+    - See you
+    - Catch you later
+    - धन्यवाद
+    - chalo bye
+    - theek hai bye
+    - milte hain
+    - phir milte hain
+    - baad me milte hain
+    - nikalta hoon
+    - ok then
+    - have a good day
+    - take care
+    - baad mein connect karte hain
+    - ab main chalta hoon
+
+- intent: set_language
+  examples: |
+    - भाषा को [हिंदी](language) में बदलो
+    - [हिंदी](language) में बात करें
+    - [अंग्रेजी](language) में बात करते हैं
+    - language [english](language) set karo
+    - [hindi](language) me batao
+    - [english](language) me baat karo
+    - [English](language) please
+    - [Hindi](language) me switch karo
+    - [english](language) me baat kar sakte hain?
+    - language [hindi](language) karo
+    - [hindi](language) me continue karo
+    - i want to use [english](language)
+    - kya hum [hindi](language) me baat kar sakte hain
+    - let's switch to [english](language)
+    - i'd prefer [hindi](language)
+    - change language to [hindi](language)
+    - [english](language) use karo
+    - can we do this in [hindi](language)
+
+- intent: check_stock
+  examples: |
+    - [vivo](product_name) के कितने पीस हैं?
+    - [apple](product_name) का स्टॉक कितना है?
+    - [vivo](product_name) ka stock dikhao
+    - mujhe [idk](product_name) ka stock janna hai
+    - [apple](product_name) ka stock count kya hai?
+    - [apple](product_name) ka inventory check karna
+    - Do you have [vivo](product_name) in stock?
+    - How many [idk](product_name) are left?
+    - [apple](product_name) ka stock hai kya?
+    - [vivo](product_name) kitna pada hai?
+    - zara [idk](product_name) ka stock check karna
+    - stock me [apple](product_name) hai?
+    - [vivo](product_name) ka current stock level kya hai
+    - [idk](product_name) ka inventory status batao
+    - i need to know stock for [apple](product_name)
+    - tell me the stock for [vivo](product_name)
+    - [idk](product_name) ke kitne units bache hain?
+    - check [apple](product_name) inventory
+
+- intent: add_stock
+  examples: |
+    - [15](number) [apple](product_name) स्टॉक में जोड़ दो
+    - [vivo](product_name) का स्टॉक [5](number) से बढ़ा दो
+    - Inventory update karo, [30](number) [vivo](product_name) jodo
+    - [apple](product_name) ka stock [50](number) unit se badhao
+    - Stock me [5](number) [vivo](product_name) add karo
+    - Increment [apple](product_name) by [50](number)
+    - stock me [10](number) [idk](product_name) daal do
+    - [vivo](product_name) ka stock [5](number) badha do
+    - [15](number) aur [apple](product_name) aa gaye hain
+    - inventory me [20](number) [vivo](product_name) add karo
+    - we just got [25](number) more [idk](product_name)
+    - [apple](product_name) ka stock [30](number) se increase karo
+    - [50](number) [vivo](product_name) aur receive hue hain
+    - update stock, [10](number) [apple](product_name) add hue
+    - naya stock aaya hai, [5](number) [idk](product_name)
+    - [vivo](product_name) ke [12](number) units aur add kar do
+
+- intent: remove_stock
+  examples: |
+    - [apple](product_name) के [2](number) यूनिट हटा दो
+    - maine abhi [3](number) [idk](product_name) beche
+    - Inventory se [10](number) [vivo](product_name) nikalo
+    - [idk](product_name) ko [4](number) se kam karo
+    - [2](number) [apple](product_name) remove karo
+    - Reduce stock of [vivo](product_name) by [5](number)
+    - Shipped [1](number) [apple](product_name)
+    - stock se [5](number) [apple](product_name) kam kar do
+    - [2](number) [vivo](product_name) dispatch ho gaye
+    - [1](number) [idk](product_name) bech diya
+    - [10](number) [apple](product_name) stock se hatao
+    - [vivo](product_name) ke [3](number) units sold
+    - inventory se [4](number) [idk](product_name) minus karo
+    - [5](number) [apple](product_name) ka order nikla hai
+    - reduce [vivo](product_name) stock by [2](number)
+    - decrement [idk](product_name) by [1](number)
+    - [10](number) [apple](product_name) nikal do
+
+- intent: query_low_stock
+  examples: |
+    - कौन से आइटम स्टॉक में कम हैं?
+    - क्या खत्म हो रहा है?
+    - कम इन्वेंट्री की रिपोर्ट दो
+    - Koi item kam stock mein hai kya?
+    - Kya phir se stock karna hai?
+    - Low stock report do
+    - Kaunsi cheezein kam hain?
+    - low stock items ki list do
+    - kya kya khatam hone wala hai?
+    - konse products reorder karne hain?
+    - mujhe low inventory report chahiye
+    - kiska stock kam hai?
+    - show me items running low on stock
+    - anything that needs restocking?
+    - low stock level wale items batao
+    - konse items ka stock level low hai?
+    - mujhe reorder list chahiye
+
+- intent: check_item_details
+  examples: |
+    - [vivo](product_name) के बारे में और बताओ
+    - [apple](product_name) की डिटेल्स क्या हैं?
+    - Mujhe [idk](product_name) par jaankari chahiye
+    - [vivo](product_name) ke baare me batao
+    - [apple](product_name) ki specifications do
+    - [apple](product_name) ke baare me kuch batao
+    - [vivo](product_name) ki info do
+    - [idk](product_name) ki details chahiye thi
+    - mujhe [apple](product_name) ki specifications janni hain
+    - [vivo](product_name) ko describe karo
+    - tell me more about the [idk](product_name)
+    - what are the details for [apple](product_name)?
+    - i need info on [vivo](product_name)
+    - fetch details for [idk](product_name)
+    - [apple](product_name) ka description do
+
+- intent: query_sales_report
+  examples: |
+    - मुझे  सेल्स रिपोर्ट दो
+    -  bikri ke aankde dikhao
+    -  sales data nikalo
+    - Sales report generate karo
+    - sales report chahiye
+    - sales report do
+    - mujhe sales figures chahiye
+    - pichle mahine ka report generate karo
+    - kal ki sales kaisi thi?
+    - is quarter ki sales data dikhao
+    - mujhe is saal ka sales report chahiye
+    - pull up sales report for today
+    - how were sales last month?
+    - give me the sales report for this week
+    - generate sales report for last quarter
+
+- regex: number
+  examples: |
+    - \d+
+
+- regex: product_name
+  examples: |
+    - \b\w+(\s\w+)*\b 

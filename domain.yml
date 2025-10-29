@@ -1,0 +1,76 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - set_language
+  - check_stock
+  - add_stock
+  - remove_stock
+  - query_low_stock
+  - check_item_details
+  - query_sales_report
+
+entities:
+  - language
+  - product_name
+  - number
+  - time_period
+
+slots:
+  language:
+    type: text
+    influence_conversation: true
+    initial_value: "en"
+    mappings:
+    - type: from_entity
+      entity: language
+  product_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: product_name
+  quantity:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: number 
+
+actions:
+  - action_set_language
+  - action_check_stock
+  - action_add_stock
+  - action_remove_stock
+  - action_low_stock
+  - action_check_item_details
+  - action_sales_report
+
+responses:
+  utter_greet:
+    - condition:
+        - type: slot
+          name: language
+          value: "en"
+      text: "Hello! How can I help you?"
+    - condition:
+        - type: slot
+          name: language
+          value: "hi"
+      text: "नमस्ते! मैं आपको कैसे मदद कर सकता हूँ?"
+  utter_goodbye:
+    - condition:
+        - type: slot
+          name: language
+          value: "en"
+      text: "Goodbye! Have a great day!"
+    - condition:
+        - type: slot
+          name: language
+          value: "hi"
+      text: "अलविदा! आपका दिन शुभ हो!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

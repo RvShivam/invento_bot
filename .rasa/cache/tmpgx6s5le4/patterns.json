@@ -1,0 +1,10 @@
+[
+  {
+    "name": "number",
+    "pattern": "\\d+"
+  },
+  {
+    "name": "number",
+    "pattern": "\\d+"
+  }
+]

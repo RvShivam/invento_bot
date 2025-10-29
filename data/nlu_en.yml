@@ -1,0 +1,105 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello there
+    - hi
+    - hello
+    - good morning
+    - good evening
+    - yo
+    - what's up
+
+- intent: goodbye
+  examples: |
+    - bye bye
+    - goodbye
+    - see you around
+    - catch you later
+    - talk to you later
+    - I have to go
+
+- intent: set_language
+  examples: |
+    - Switch to [English](language)
+    - Let's speak in [English](language)
+    - I want to use [English](language)
+    - Change the language to [English](language)
+    - Can we talk in [English](language) please?
+    - I'd rather use [english](language)
+    - [English](language) please
+    - in [english](language)
+    - set language to [Hindi](language)
+    - I prefer speaking [Hindi](language)
+    - Can we switch to [hindi](language)?
+    - let's do this in [Hindi](language)
+    - I want to talk in [hindi](language)
+
+- intent: check_stock
+  examples: |
+    - How many [vivo](product_name) do you have?
+    - What is the current stock level for [apple](product_name)?
+    - Can you check the inventory of [idk](product_name)?
+    - Do you have any [apple](product_name) in stock?
+    - Show me the inventory for [vivo](product_name)
+    - I need to know the stock for [idk](product_name)
+    - [apple](product_name) stock count
+    - Give me the stock for [Temp1](product_name)
+    - What about [Temp2](product_name)
+    - [Temp3](product_name)
+    - check stock
+    - what is the inventory
+    - show me the stock levels
+    - I want to know the stock count
+
+- intent: add_stock
+  examples: |
+    - Add [15](number) [apple](product_name) to stock
+    - Please increase [vivo](product_name) stock by [5](number)
+    - We just got [10](number) more [idk](product_name)
+    - I have received [25](number) new [apple](product_name)
+    - Update inventory, add [30](number) [vivo](product_name)
+    - Increment [apple](product_name) stock by [50](number) units
+
+- intent: remove_stock
+  examples: |
+    - Remove [2](number) units of [apple](product_name)
+    - We shipped [1](number) [vivo](product_name)
+    - I just sold [3](number) [idk](product_name)
+    - Dispatch [10](number) [vivo](product_name) from inventory
+    - Reduce the stock of [apple](product_name) by [5](number)
+    - Decrement [idk](product_name) by [4](number)
+
+- intent: query_low_stock
+  examples: |
+    - Which items are running low on stock?
+    - Show me products that need reordering
+    - What is running out?
+    - Give me the low inventory report
+    - Any items with low stock levels?
+    - What needs to be restocked?
+
+- intent: check_item_details
+  examples: |
+    - Tell me more about the [vivo](product_name)
+    - What are the details for [apple](product_name)?
+    - I need info on the [idk](product_name)
+    - Can you describe the [vivo](product_name) for me?
+    - Fetch specifications for the [apple](product_name)
+
+- intent: query_sales_report
+  examples: |
+    - Give me the sales report
+    - Show me the sales figures
+    - I want a report for last month
+    - Pull sales data
+    - How were sales?
+    - Generate a sales report
+
+- regex: number
+  examples: |
+    - \d+
+
+

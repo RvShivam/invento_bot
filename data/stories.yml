@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+- story: Greet and change language
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: set_language
+  - action: action_set_language
+
+- story: Check stock and add stock
+  steps:
+  - intent: check_stock
+  - action: action_check_stock
+  - intent: add_stock
+  - action: action_add_stock
+
+- story: Remove stock and query low stock
+  steps:
+  - intent: remove_stock
+  - action: action_remove_stock
+  - intent: query_low_stock
+  - action: action_low_stock
+
+- story: Check item details and query sales report
+  steps:
+  - intent: check_item_details
+  - action: action_check_item_details 
+  - intent: query_sales_report
+  - action: action_sales_report
